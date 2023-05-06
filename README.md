@@ -24,3 +24,21 @@ APP_PORT=9999
 APP_HOME=/home/admin/app/sparrow-boot-demo # 从package.tgz中解压出来的jar包放到这个目录下
 ```
 
+# 项目启动示例
+```agsl
+cd /home/admin/app
+echo current directory is `pwd`
+
+# if [ ! -d "sparrow-boot-demo" ];then
+#     mkdir sparrow-boot-demo
+# else
+#     echo "directory has exist"
+# fi
+
+tar zxvf /home/admin/app/sparrow-boot-demo.tgz 
+tar zxvf /home/admin/app/sparrow-boot-demo.tar.gz 
+
+echo sh /home/admin/app/sparrow-boot-demo/startup.sh restart
+sh /home/admin/app/sparrow-boot-demo/startup.sh restart
+```
+
