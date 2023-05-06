@@ -37,25 +37,30 @@ else
     echo "directory has exist"
 fi
 
-tar zxvf /home/admin/app/sparrow-boot-demo.tgz 
+tar zxvf /home/admin/app/sparrow-boot-demo.tgz -C ./sparrow-boot-demo
 echo sh /home/admin/app/sparrow-boot-demo/startup.sh restart
 sh /home/admin/app/sparrow-boot-demo/startup.sh restart
 
 ```
 
-## 自定义打包
+## 手动打包
 ```agsl
 
 cd /home/admin/app
 echo current directory is `pwd`
 
+if [ ! -d "sparrow-boot-demo-manual" ];then
+     mkdir sparrow-boot-demo-manual
+else
+    echo "directory has exist"
+fi
 
+tar zxvf /home/admin/app/sparrow-boot-demo-manual.tgz -C ./sparrow-boot-demo-manual
+tar zxvf /home/admin/app/sparrow-boot-demo-manual/sparrow-boot-demo.tar.gz 
 
-tar zxvf /home/admin/app/sparrow-boot-demo.tgz 
-tar zxvf /home/admin/app/sparrow-boot-demo.tar.gz 
+echo sh /home/admin/app/sparrow-boot-demo-manual/sparrow-boot-demo/startup.sh restart
+sh /home/admin/app/sparrow-boot-demo-manual/sparrow-boot-demo/startup.sh restart
 
-echo sh /home/admin/app/sparrow-boot-demo/startup.sh restart
-sh /home/admin/app/sparrow-boot-demo/startup.sh restart
 ```
 
 
