@@ -25,15 +25,31 @@ APP_HOME=/home/admin/app/sparrow-boot-demo # 从package.tgz中解压出来的jar
 ```
 
 # 项目启动示例
+## 云效平台
 ```agsl
+
 cd /home/admin/app
 echo current directory is `pwd`
 
-# if [ ! -d "sparrow-boot-demo" ];then
-#     mkdir sparrow-boot-demo
-# else
-#     echo "directory has exist"
-# fi
+if [ ! -d "sparrow-boot-demo" ];then
+     mkdir sparrow-boot-demo
+else
+    echo "directory has exist"
+fi
+
+tar zxvf /home/admin/app/sparrow-boot-demo.tgz 
+echo sh /home/admin/app/sparrow-boot-demo/startup.sh restart
+sh /home/admin/app/sparrow-boot-demo/startup.sh restart
+
+```
+
+## 自定义打包
+```agsl
+
+cd /home/admin/app
+echo current directory is `pwd`
+
+
 
 tar zxvf /home/admin/app/sparrow-boot-demo.tgz 
 tar zxvf /home/admin/app/sparrow-boot-demo.tar.gz 
@@ -41,4 +57,6 @@ tar zxvf /home/admin/app/sparrow-boot-demo.tar.gz
 echo sh /home/admin/app/sparrow-boot-demo/startup.sh restart
 sh /home/admin/app/sparrow-boot-demo/startup.sh restart
 ```
+
+
 
